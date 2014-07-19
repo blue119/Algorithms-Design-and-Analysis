@@ -49,6 +49,7 @@ class HEAPQ(object):
             self.bubble_down(n)
 
     def pop(self):
+        if self.array_len == 0: return None
         self._swap(1, -1)
         self.array_len -= 1
         r = self.array.pop()
@@ -72,7 +73,7 @@ def verify(array):
 
 def main():
     # we shall consider the list from element 1, not 0
-    arr = [16, 4, 10, 14, 7, 9, 3, 2, 8, 1]
+    arr = [16, 4, 10, ]
 
     #  key = lambda x, y: x > y #extract_max
     #  hq = HEAPQ(key = key)
